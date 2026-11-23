@@ -31,49 +31,60 @@ The architecture includes public and private subnets distributed across multiple
 
 ### Application Traffic Flow
 
+## Application Traffic Flow
 
-Internet Users
-      |
-      v
-Internet Gateway
-      |
-      v
-Application Load Balancer
-      |
-      v
-Target Group
-      |
-      v
-EC2 Auto Scaling Group
-      |
-      +-------------------+
-      |                   |
-      v                   v
-EC2 Instance 1       EC2 Instance 2
-      |                   |
-      +---------+---------+
-                |
-                v
-             Amazon EFS
+The application follows this traffic flow:
 
+1. Internet users send HTTP requests to the application.
+2. The requests enter the AWS VPC through the Internet Gateway.
+3. The Application Load Balancer receives incoming traffic.
+4. The Load Balancer forwards requests to the Target Group.
+5. The Target Group routes requests to healthy EC2 instances registered within it.
+6. The EC2 instances are managed by an Auto Scaling Group.
+7. The application runs on EC2 instances deployed across multiple Availability Zones.
+8. Amazon EFS provides shared storage to the EC2 instances.
 
-
+This architecture allows incoming traffic to be distributed across multiple instances while providing scalability, high availability, and shared storage.
 
 ## AWS Services Used
 
-| AWS Service | Purpose |
-|
-| Amazon VPC | Provides an isolated networking environment |
-| Amazon EC2 | Hosts the web application |
-| Application Load Balancer | Distributes incoming application traffic |
-| EC2 Auto Scaling | Automatically manages EC2 instance capacity |
-| Amazon EFS | Provides shared file storage |
-| Internet Gateway | Enables internet connectivity for the VPC |
-| NAT Gateway | Enables outbound internet access from private resources |
-| Security Groups | Controls inbound and outbound network traffic |
-| Route Tables | Controls network traffic routing |
+## AWS Services Used
 
----
+### Amazon VPC
+
+Provides an isolated networking environment for the project infrastructure.
+
+### Amazon EC2
+
+Hosts the web application on virtual machines.
+
+### Application Load Balancer (ALB)
+
+Distributes incoming application traffic across registered EC2 instances.
+
+### EC2 Auto Scaling Group
+
+Automatically manages the number of EC2 instances based on the configured scaling policies and capacity settings.
+
+### Amazon EFS
+
+Provides shared file storage that can be accessed by multiple EC2 instances.
+
+### Internet Gateway
+
+Enables communication between the VPC and the internet.
+
+### NAT Gateway
+
+Provides outbound internet connectivity to resources located in private subnets.
+
+### Security Groups
+
+Control inbound and outbound traffic to AWS resources.
+
+### Route Tables
+
+Define network traffic routing within the VPC and between the VPC and external networks.
 
 ## Key Features
 
@@ -90,27 +101,19 @@ EC2 Instance 1       EC2 Instance 2
 ## Repository Structure
 
 
-resilient-scalable-web-app-aws/
-│
-├── README.md
-│
-├── architecture/
-│   ├── architecture-diagram.png
-│   └── architecture.md
-│
-├── screenshots/
-│
-├── infrastructure/
-│
-├── deployment/
-│
-├── security/
-│
-├── testing/
-│
-├── troubleshooting/
-│
-└── scripts/
+## Repository Structure
+
+The repository is organized into the following directories and files:
+
+- `README.md` — Main project overview and entry point.
+- `architecture/` — Architecture diagrams and architecture documentation.
+- `screenshots/` — Screenshots demonstrating the AWS infrastructure and application.
+- `infrastructure/` — Documentation of AWS infrastructure components.
+- `deployment/` — Deployment procedures and configuration details.
+- `security/` — Security implementation and Security Group configurations.
+- `testing/` — Testing procedures and results.
+- `troubleshooting/` — Challenges encountered and their solutions.
+- `scripts/` — Scripts used for deployment and configuration.
 
 
 
