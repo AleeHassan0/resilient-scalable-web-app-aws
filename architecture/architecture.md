@@ -10,11 +10,11 @@ The infrastructure is deployed inside an Amazon Virtual Private Cloud (VPC), wit
 
 ## 2. AWS Region
 
-The project is deployed in the US East (N. Virginia) region.
+The project is deployed in the Asia Pacific (Mumbai) region.
 
-AWS Region: US East (N. Virginia)
+AWS Region: Asia Pacific (Mumbai)
 
-Region Code: us-east-1
+Region Code: ap-south-1
 
 The selected region provides access to the AWS services required for the project.
 
@@ -28,10 +28,10 @@ The VPC contains public and private subnets, route tables, network gateways, and
 
 ### Availability Zones
 
-The infrastructure is deployed across two Availability Zones within the US East (N. Virginia) region.
+The infrastructure is deployed across two Availability Zones within the Asia Pacific (Mumbai) region.
 
-- Availability Zone 1: us-east-1a
-- Availability Zone 2: us-east-1b
+- Availability Zone 1: ap-south-1a
+- Availability Zone 2: ap-south-1b
 
 Deploying resources across multiple Availability Zones helps improve availability and resilience by reducing dependency on a single Availability Zone.
 

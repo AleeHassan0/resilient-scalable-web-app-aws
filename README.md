@@ -25,7 +25,7 @@ The project follows AWS cloud architecture principles, including high availabili
 
 ## Architecture Overview
 
-The infrastructure is deployed within an Amazon VPC in the US East (N. Virginia) region.
+The infrastructure is deployed within an Amazon VPC in the  Asia Pacific (Mumbai) region (ap-south-1).
 
 The architecture includes public and private subnets distributed across multiple Availability Zones.
 
