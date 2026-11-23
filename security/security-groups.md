@@ -6,7 +6,6 @@ Security Groups act as virtual firewalls that control inbound and outbound traff
 
 In this project, Security Groups are used to secure the Application Load Balancer, EC2 web servers, and Amazon EFS by restricting traffic to specific sources and ports.
 
-Initially, unrestricted inbound traffic was allowed. The security configuration was improved by removing these rules and allowing only the required traffic.
 
 ## 2. Security Architecture
 
@@ -39,7 +38,6 @@ The ALB Security Group controls inbound traffic to the Application Load Balancer
 - Source: My IP
 - Purpose: Allows restricted access from the administrator's IP address for testing.
 
-The previous unrestricted inbound rule allowing all traffic was removed.
 
 ## 4. web-server-SG
 
@@ -65,7 +63,6 @@ The Web Server Security Group controls inbound traffic to the EC2 instances host
 
 Direct access from the internet is not permitted.
 
-The previous inbound rule allowing traffic from anywhere was removed.
 
 ## 5. EFS-SG
 
