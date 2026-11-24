@@ -1,4 +1,4 @@
-###EC2 Instance Script
+###EC2 Instance Script(web-application)
 <!DOCTYPE html>
 <html lang="en">
 <head>
