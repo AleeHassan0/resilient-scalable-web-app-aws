@@ -103,8 +103,6 @@ Control inbound and outbound network traffic to AWS resources.
 ### Route Tables
 Define how network traffic is routed within the VPC and to external networks.
 
-### Amazon CloudWatch
-Provides AWS resource monitoring capabilities through available metrics.
 
 ---
 
