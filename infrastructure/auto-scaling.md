@@ -28,9 +28,9 @@ This ensures that newly launched instances use a consistent configuration.
 
 The Auto Scaling Group uses three capacity settings:
 
-- **Minimum Capacity:** [Add actual value]
-- **Desired Capacity:** [Add actual value]
-- **Maximum Capacity:** [Add actual value]
+- **Minimum Capacity:** 2
+- **Desired Capacity:** 2
+- **Maximum Capacity:** 5
 
 The minimum capacity defines the lowest number of instances to maintain.
 
